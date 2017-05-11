@@ -11,3 +11,7 @@
 //     buttons[i].style.backgroundColor = "white";
 //   })
 // }
+
+document.addEventListener('click', () => {
+  scrollTo(0,0);
+})
