@@ -2,34 +2,63 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
+   <meta charset="utf-8">
+   <meta name="description" content="Javascript project for FreeCodeCamp, functioning Javascript calacultor styled with HTML/CSS/Bootstrap">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Overlock' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/js_cal_style.css">
 </head>
 
 <body>
-  <nav>
-  </nav>
+  <nav id="top"></nav>
+  
   <div class="container">
     <header class="row intro text-center">
       <h1 class="intro_name">Hello, I'm Greg Munker</h1>
       <h2 class="intro_title">Front-End Developer</h2>
+      <h4 class="intro_subtext">Sometimes simple speaks volumes...</h4>
 
-      <div class="buttons" id="contact">
-        <p class="buttons-text"><a href="#toolbox">Toolbox...</a></p>
-      </div>
       <div class="buttons" id="about">
         <p class="buttons-text"><a href="#about_me">About Me...</a></p>
       </div>
-
+      <div class="buttons" id="contact">
+        <p class="buttons-text"><a href="#toolbox">Toolbox...</a></p>
+      </div>
       <div class="buttons" id="projects">
         <p class="buttons-text"><a href="#projects">Projects...</a></p>
       </div>
       <div class="buttons" id="contact">
         <p class="buttons-text"><a href="#contact_me">Contact Me...</a></p>
       </div>
-
     </header>
+
+    <section id="about_me" class="about_me row">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#Personal_Modal">
+              Personal
+            </button>
+            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#Edu_Modal">
+              Education
+            </button>
+          </div>
+          <img class="img-responsive col-xs-12 col-md-4" src="images/GregFamily.jpg" />
+          <div class="col-xs-12 col-md-4">
+            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#webDevs_Modal">
+              webDevs(inTraining, online, studyGroup);
+            </button>
+            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#FCC_Maricopa_Modal">
+              FreeCodeCamp Maricopa, AZ
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="toolbox row" id="toolbox">
       <h2 class="text-center">My Toolbox</h2>
@@ -170,12 +199,15 @@
 
     <section id="projects" class="projects row">
       <div class="col-sm-12">
-
         <h2 class="text-center">My Projects</h2>
 
+
+
+
+
+
         <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <img class="project_image img-responsive" src="https://raw.githubusercontent.com/Gmunker/portfolio/master/images/Simon_Game.png"
-          />
+          <img class="project_image img-responsive" src="images/chop_tribute.png" data-toggle="modal" data-target="#chop_tribute_Modal" />
           <hr>
           <div class="project_title">
             <h4 class="text-center">1978 Pocket Simon Game</h4>
@@ -198,6 +230,34 @@
             </ul>
           </div>
         </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <img class="project_image img-responsive" src="images/js_cal.png" data-toggle="modal" data-target="#js_cal_Modal" />
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">1978 Pocket Simon Game</h4>
+            <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> I am presented with a random series of button presses.
+                <li><span class="bold">User Story:</span> Each time I input a series of button presses correctly, I see the same
+                  series of button presses but with an additional step.</li>
+                <li><span class="bold">User Story:</span> I hear a sound that corresponds to each button both when the series
+                  of button presses plays, and when I personally press a button.</li>
+                <li><span class="bold">User Story:</span> If I press the wrong button, I am notified that I have done so, and
+                  that series of button presses starts again to remind me of the pattern so I can try again.</li>
+                <li><span class="bold">User Story:</span> I can see how many steps are in the current series of button presses.</li>
+                <li><span class="bold">User Story:</span> If I want to restart, I can hit a button to do so, and the game will
+                  return to a single step.</li>
+                <li><span class="bold">User Story:</span> I can play in strict mode where if I get a button press wrong, it notifies
+                  me that I have done so, and the game restarts at a new random series of button presses.</li>
+                <li><span class="bold">User Story:</span> I can win the game by getting a series of 20 steps correct. I am notified
+                  of my victory, then the game starts over.</li>
+            </ul>
+          </div>
+        </div>
+
+
+
 
         <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
           <img class="project_image img-responsive" src="https://raw.githubusercontent.com/Gmunker/portfolio/master/images/Simon_Game.png"
@@ -224,14 +284,28 @@
             </ul>
           </div>
         </div>
+
+        
+
+
+
+
 
       </div>
     </section>
 
-    <section id="about_me" class="about_me row">
-      <div class="col-sm-12">
+    
 
-        <h3>Personal:</h3>
+  </div>
+
+  <div class="modal fade" id="Personal_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Personal</h4>
+      </div>
+      <div class="modal-body">
         <p>My name is Greg Munker, born and rasied in Northen New Jersey, first and formost i'm a father of 2, younglings. They
           are my everything, and I do everything for the betterment of them. Outisde of that....
         </p>
@@ -322,8 +396,19 @@
           goal was to reaffirm my knowledge and share that with those who needed help. For those that were in the group seemed
           to benifit, just as much as I did.
         </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <h3>Education:</h3>
+<div class="modal fade" id="Edu_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Education</h4>
+      </div>
+      <div class="modal-body">
         <p>
           2015: I started with CodeCademy.com. I wanted to see where I stood with my knowledge of HTML vs. current HTML standards.
           I learned quickly that I had a very solid core to work with. I was able to create basic HTMl / css sites quick.
@@ -385,13 +470,29 @@
           I look forward to speaking to you if you're interested in me for a position, or just want to chat.
 
         </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <h3>webDevs(inTraining, online, studyGroup);</h3>
+<div class="modal fade" id="webDevs_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">webDevs(inTraining, online, studyGroup);</h4>
+      </div>
+      <div class="modal-body">
 
         <p>
-          webDevs (status, loc, type) => { <br/> //Algorithm of Success <br/> while (status == 'inTraining') {<br/> tryAgain();
-          <br/> if (status == 'trained') {<br/> webDevs(inTraining, online, studyGroup)<br/> }
-          <br/> }
+          webDevs (status, loc, type) => { <br/> 
+          &ensp;//Algorithm of Success <br/> 
+          &ensp;&ensp;while (status == 'inTraining') {<br/> 
+          &ensp;&ensp;&ensp;tryAgain(); <br/> 
+          &ensp;&ensp;if (status == 'trained') {<br/> 
+          &ensp;&ensp;&ensp;webDevs(inTraining, online, studyGroup)<br/> 
+          &ensp;&ensp;}
+          <br/> &ensp;}
           <br/> }
           <br/> webDevs(inTraining, online, studygroup);<br/>
         </p>
@@ -428,19 +529,414 @@
           If your interested in joining us, please visit <a href="https://plus.google.com/communities/108246286571909040260">
          webDevs(inTraining, online, studyGroup);</a>
         </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <h3>FreeCodeCamp Maricopa, AZ</h3>
-
+<div class="modal fade" id="FCC_Maricopa_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">FreeCodeCamp Maricopa, AZ</h4>
+      </div>
+      <div class="modal-body">
         <p>
           You can find the local group information at: <a href="https://www.facebook.com/groups/free.code.camp.maricopa.arizona/?ref=br_rs">
          this Facebook Group</a>, I just recently joined this group when I moved here. There are currently no local meetups
           for it, but i'm hoping to change that in the upcoming months after i'm settled in our new home.
         </p>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="chop_tribute_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-chop modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">FreeCodeCamp Maricopa, AZ</h4>
+      </div>
+      <div class="modal-body">
+
+
+
+
+        
+        <div class="chop_tribute container well">
+    <section class="chop_tribute_header">
+      <div class="row col-md-12">
+        <h1 class="text-center">The Children's Hospital of Philadelphia</h1>
+        <h2 class="text-center">CHOP</h2>
+      </div>
+      <div class="row thumbnail col-md-offset-1 col-md-10">
+        <img src="http://www.woodruff-brown.com/wp-content/uploads/2014/05/CHOP01retouchedDARKER2PPweb.jpg" alt="Front wideshot view of The Childrens Hospital of Philadelphia">
+        <p class="caption">The Children's Hospital of Philadelphia is one of the largest and oldest children's hospitals in the world, and United
+          States' first hospital dedicated to the healthcare of children.</p>
+      </div>
     </section>
 
+    <section class="chop_tribute_main row col-md-10 col-md-offset-1 row">
+      <h4>History of CHOP</h4>
+      <p>In 1855, Philadelphia had a population of about 460,000, and recorded 10,507 deaths. Leading causes of death were smallpox,
+        typhoid, and scarlet fever. In the worst month of 1855, 300 children under 12 years old died, primarily of infectious
+        diseases. A Philadelphia physician, Dr. Francis West Lewis, inspired by a visit to the new Great Ormond Street Hospital
+        for Sick Children in London (founded 1852), enlisted Drs. T. Hewson Bache and R.A.F. Penrose to found the first children's
+        hospital in North America.</p>
+      <ul>
+        <li>
+          <p>
+            <b>1855</b> - On November 23, 1855 the following small advertisement appeared in the Philadelphia Public Ledger:
+            <blockquote>
+              <small>The Children's Hospital—located on Blight Street, running from Pine to Lombard, below Broad, is now open for the reception of Patients. Children suffering from Acute Diseases and Accidents will be received free of charge. A dispensary, for sick children, is also attached to the Hospital and will be open at the same place every day, (Sundays excepted from 11 to 12 o'clock, when advice and medicine will be given free of charge.)</small>
+            </blockquote>
+            The first location of the original Children's Hospital was a small building on Blight Street (now Watts St). The hospital
+            consisted of 12 beds and a dispensary. That year they recorded 67 inpatient admissions and 306 outpatient visits.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>1866</b> - Children’s Hospital was relocated to 22nd Street between Locust and Walnut Sts after the American
+            Civil War. This hospital consisted of 35 beds and a dispensary.</p>
+        </li>
+        <li>
+          <p>
+            <b>1870</b> - Surgery was being performed.</p>
+        </li>
+        <li>
+          <p>
+            <b>1892</b> - Capacity was increased to 94 beds by 1892.</p>
+        </li>
+        <li>
+          <p>
+            <b>1900</b> - The Catherwood Milk Laboratory was established.</p>
+        </li>
+        <li>
+          <p>
+            <b>1914 - The first Department for the Prevention of Disease in the nation was established.</b></p>
+        </li>
+        <li>
+          <p>
+            <b>1916</b> - Construction adjacent to the 2nd hospital was begun in 1913 and the first unit was opened in 1916
+            extending toward 18th and Bainbridge Sts. In 1919 the hospital became affiliated with the University of Pennsylvania
+            School of Medicine. The affiliation became steadily closer over the next 17 years, with the Children's Hospital
+            becoming identical to the pediatric department of the school of medicine, with most of the attending physicians
+            appointed jointly to both institutions.</p>
+        </li>
+        <li>
+          <p>
+            <b>1923</b> - Whooping cough (pertussis) vaccine was first developed.</p>
+        </li>
+        <li>
+          <p>
+            <b>1937</b> - The first formal allocation of funds to research was recorded in 1937.</p>
+        </li>
+        <li>
+          <p>
+            <b>1937</b> - The first closed incubator for newborns was used.</p>
+        </li>
+        <li>
+          <p>
+            <b>1962</b> - Dr. C. Everett Koop opened the first neonatal intensive care unit (NICU) in the nation, along with
+            a new neonatal surgical unit.</p>
+        </li>
+        <li>
+          <p>
+            <b>1965</b> - The first home care program for children was established.</p>
+        </li>
+        <li>
+          <p>
+            <b>1974</b> - Construction of the new hospital at a new site on the west side of the Schuylkill River at 34th
+            Street and Civic Center Boulevard, adjacent to the campus of the University of Pennsylvania, was begun in 1969
+            and the first building was opened in 1974. This present Children's Hospital complex occupies part of the site
+            of the old Philadelphia General Hospital and Blockley Almshouse.</p>
+        </li>
+        <li>
+          <p>
+            <b>2005</b> - CHOP celebrated its 150th anniversary on November 18, 2005.</p>
+        </li>
+        <li>
+          <p>
+            Milestones and advances in pediatric care pioneered at CHOP include the first formal medical training in pediatrics, techniques
+            for the correction of congenital heart malformations, incubators for newborn intensive care, home ventilator
+            care, and vaccine development.</p>
+        </li>
+        <li>
+          <p>
+            The Children's Hospital of Philadelphia is in Philadelphia's University City neighborhood, and since 2001 has been undergoing
+            a $1.5 billion expansion that has doubled the hospital's size, while also building more than one million square
+            feet of new research and outpatient facilities on a large, eight acre site south of the main hospital on Civic
+            Center Boulevard. The South Campus expansion includes the eleven-story Colket Translational Research Building,
+            which will provide lab space for the Center for Childhood Cancer Research and the Center for Cellular and Molecular
+            Therapeutics. The new South Campus will also include an underground parking garage and an ambulatory care building
+            with outpatient services.</p>
+        </li>
+        <li>
+          <p>
+            This South Campus expansion adjoins the University of Pennsylvania Health System's construction of the Perelman Center for
+            Advanced Medicine and Roberts Proton Therapy Center.</p>
+        </li>
+      </ul>
+      <hr>
+
+      <ul>
+        <li>
+          <p>
+            <b>2.10.2016</b> - My son Nathan Munker was admitted to the hospital in active Congestive Heart Failure. He was
+            born with Complete Atrioventricular Canal defect (CAVC), Atrial Septal Defect, and Ventricular Septal Defect.
+            </p>
+        </li>
+        <li>
+          <p>
+            <b>2.16.2016</b> - Nathan Munker underwent open heart surgery by Dr. Thomas L Spray at The Children’s Hospital
+            of Philadelphia. The surgery was a complete success and my son will now live a long happy life. </p>
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <img src="https://firebasestorage.googleapis.com/v0/b/personal-page-a0dbc.appspot.com/o/2102016.jpg?alt=media&token=f2f57fbe-fcec-480f-8792-1f530b4e8e9d"
+            class="img-responsive img-rounded" alt="Collage of pictures of my son Nathan Munker">
+        </div>
+      </div>
+    </section>
+    <section class="row col-md-10 col-md-offset-1">
+
+      <p>This project was supposed to be just a first step into my new career field, to essentially show how to do a quick basic
+        layout with HTML / CSS utilizing Bootstrap. I was asked to make a tribute page, I could not in good conscience choose
+        some random movie star or band.<br>
+        I wanted this to mean something to me, so I spent 2 days on something that took me just about 1 hour to make in total.
+        I could not decide if I wanted to do it on Dr. Spray, or the staff of the hospital, or even just my Son and all he
+        has gone through. In the end I decided on the hospital in a whole. Without the facility and the pioneering founding
+        fathers who opened the doors in the first place, who knows what would have become of Nathan..<br>
+        It’s unlikely this will ever reach the hospital, the staff or Dr. Spray, but thank you for giving my Son a chance.
+        </p>
+
+    </section>
+
+    <footer class="col-md-offset-1 col-md-10">
+      <p>It is my hope that this facility will need to be closed due to no more sick children ever, but that is not reality. Because of reality, and if you ever find yourself in need of special child care, know that CHOP is the leader from mine and my families experiences. You can find more information about them by visiting there offical web page, <a href="http://www.chop.edu">http://www.chop.edu</a>.
+    </footer>
+
+
   </div>
-  <script src="script.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="js_cal_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">FreeCodeCamp Maricopa, AZ</h4>
+      </div>
+      <div class="modal-body">
+
+
+
+        <div id="header">
+  <div class="container-fluid">
+    <div class="row">
+      <p class="mono">Currently some of the functions are not working, I have not maintained this project since completing it. I will be finding time in the near future to update it. For now please enjoy my CSS design.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="calculator_body">
+
+  <!--Body Hood-->
+  <div class="row" id="body_hood">
+    <div class="col-xs-offset-2 col-xs-1 body_hood_left">
+    </div>
+    <div class="col-xs-6 body_hood_middle">
+    </div>
+    <div class="col-xs-1 body_hood_right">
+    </div>
+  </div>
+  <!--/.row #body_hood-->
+  <!--End Body Hood-->
+
+  <div class="row" id="display">
+    <div class="col-xs-12 display" id="display_text">0.</div>
+  </div>
+
+  <!--Main Calculator-->
+  <div class="row" id="keypad">
+    <div class="col-xs-12 branding">
+      <div class="col-xs-offset-1 col-xs-1">
+        <img id="te_logo" src="http://hotline.ccsinsight.com/_images-article/TI_logo.png" />
+      </div>
+      <div class="col-xs-9" id="datamath">
+        <p>Datamath</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn ce row5 left_btn" id="clear_entry">
+          <p>CE</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn row5 op" id="divide">
+          <p>&divide;</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn row5 op" id="multiple">
+          <p>X</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div id="switch">
+          <div class="switch_titles" id="switch_title">
+            <p>chain</p>
+          </div>
+          <div id="toggle_hole">
+            <div id="toggle_switch">
+
+            </div>
+          </div>
+          <div class="switch_titles" id="const_title">
+            <p>const</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input num_left row4 left_btn">
+          <p>7</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row4" id="eight">
+          <p>8</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row4">
+          <p>9</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row4 right_btn c">
+          <p>C</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn number input num_left row3 left_btn">
+          <p>4</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row3">
+          <p>5</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row3">
+          <p>6</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row3 right_btn neg">
+          <p>-</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input num_left row2 left_btn">
+          <p>1</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row2">
+          <p>2</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row2">
+          <p>3</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row2 right_btn op">
+          <p>+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input num_left row1 left_btn" id="zero">
+          <p class="row5_p">0</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number row1 decimal" id="decimal">
+          <p class="row5_p">.</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row1 right_btn equal" id="equals">
+          <p class="row5_p">=</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="row1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="bottom">
+  </div>
+</div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script
+  src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/js_cal_script.js"></script>
 </body>
 
 </html>
