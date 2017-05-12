@@ -1,0 +1,327 @@
+html,body {
+padding: 0;
+margin: 0;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+#js_cal_Modal .modal-body {
+	background-color: black!important;
+}
+
+.mono {
+  font-family: 'Source Code Pro' ;
+  margin: 10px 0 0 10px;
+  color: #fff;
+}
+
+#logo:hover {
+  text-decoration: none;
+  text-shadow: 0 0 1px #000;
+}
+
+#manual-link {
+  font-size: 30px;
+  color: #888;
+  margin: 30px 0px 0 700px;
+  position: absolute;
+  z-index: 10;
+  cursor: help;
+}
+
+.modal-content{
+  background-color: rgba(225,225, 225,.8);
+}
+
+.modal-body img {
+  
+}
+
+#calculator_body {
+	width: 400px;
+	margin-top: 0px;
+	perspective: 60px;
+	 -webkit-perspective: 60px; /* Chrome, Safari, Opera  */
+}
+
+#body_hood {
+	margin-bottom: 0px;
+	position: relative;
+	z-index: 0;
+	-webkit-transform: rotateX(5deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(5deg);
+}
+	.body_hood_left, .body_hood_middle, .body_hood_right {
+		height: 100px;
+		position: relative;
+		z-index: 3;
+	}
+	.body_hood_left {
+		border-top-left-radius: 90%;
+		background: linear-gradient(to left, #E0D393 5%, black 150%);
+		padding: 15px;
+		margin-left: 63px;
+	}
+	.body_hood_middle {
+		width: 207px;
+		background-color: #E0D393;
+	}
+	.body_hood_right {
+		border-top-right-radius: 90%;
+		background: linear-gradient(to right, #E0D393 5%, black 150%);
+	}
+
+#display {
+	height: 100px;
+	width: 300px;
+	margin-left: 35px;
+	margin-top: -50px;
+	margin-bottom: -65px;
+	background-color: black;
+	-webkit-transform: rotateX(2deg);
+	transform: rotateX(2deg);
+	position: relative;
+	z-index: 0;
+	border-left: 12px solid;
+	border-right: 12px solid;
+	border-top: 15px solid;
+	border-color: #C6BB82;
+	border-top-left-radius: 25%;
+	border-top-right-radius: 25%;
+	text-align: right;
+}
+
+	.display {
+		font-family: 'Share Tech Mono', monospace;
+		padding-bottom: 0px;
+		font-size: 28px;
+		letter-spacing: -1px;
+		color: rgba(255, 0, 0, .8);
+		text-shadow: 2px 0px 7px red, -2px -0px 7px red;
+	}
+
+#keypad {
+	height: 410px;
+	background-image: url("http://www.freebiesgallery.com/wp-content/uploads/2012/08/dark-website-backgrounds-3.jpg");
+	background-size: cover;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	
+	-webkit-transform: rotateX(5deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(5deg);
+
+	 border-left: 15px solid;
+	 border-right: 15px solid;
+	 border-bottom: 10px solid;
+	border-color: #E0D393;
+}
+
+.branding {
+	color: #FFF8DC;
+	height: 50px;
+	font-size: 25px;
+	z-index: 2;
+	text-align: right;
+	box-shadow: 0 2px 5px #000;
+	margin-top: -30px;
+}
+
+	.branding p {
+		margin-right: 10px;
+		margin-bottom: 5px;
+	}
+
+.butt {
+	width: 50px;
+	height: 40px;
+	margin-top: 20px;
+	display: inline-flex;
+	background-color: ;
+}
+
+
+.cal_btn {
+	background-color: #E0D393;
+	width: 60px;
+	border-radius: 2px;
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+}
+
+	.cal_btn  {
+		text-align: center;
+		color: black;
+		font-size: 35px;
+		margin-top: 3px;
+		text-shadow: 1px 1px ;
+		
+	}
+
+	.cal_btn:active {
+		box-shadow: 0 0 0 #222!important;
+		margin-top: 5px;
+	}
+
+	
+		.row1 {
+			height: 40px!important;
+		}
+
+			.row p {
+				margin-top: -5px!important;
+			}
+
+		.row2 {
+			height: 40px!important;
+		}
+
+			.row2 p {
+				margin-top: -4px!important;
+			}
+
+		.row3 {
+			height: 40px!important;
+		}
+
+			.row3 p {
+				margin-top: -5px!important;
+			}
+
+		.row4 {
+			height: 40px!important;
+		}
+
+			.row4 p {
+				margin-top: -5px!important;
+			}
+
+		.row5 {
+			height: 35px!important;
+			box-shadow: 0px 6px 0px #A09769!important;
+		}
+
+			.row5 p {
+				margin-top: -5px!important;
+				font-size: 30px!important;
+			}
+
+		.number {
+			background-color: #FFF0D0!important;
+			box-shadow: 0px 6px 0px #BFB49C!important;
+			border: 1px solid #fff;
+		}
+
+			.num_left {
+				box-shadow: 1px 5px 0px #BFB49C, 0px 5px 0px #BFB49C, 1px 3px 0px #BFB49C!important;
+			}
+
+		.right_btn {
+			box-shadow: -1px 6px 0px #A09769!important;
+		}
+
+		.ce {
+			box-shadow: 1px 6px 0px #A09769!important;
+		}
+
+			.ce p {
+				margin-left: -10px;
+			}
+
+		#zero, #equals {
+			width: 115px!important;
+		}
+
+			#equals {
+				background-color: #FC893E;
+				border: 1px solid #BC662E;
+				box-shadow: -1px 6px 0px #BC662E, -1px 3px 0px #BC662E!important;
+				margin-left: 28px;
+			}
+
+			#equals:active {
+				box-shadow: 0 0 0 #222!important;
+			}
+
+			#decimal {
+				margin-left: 40px;
+			}
+
+
+#bottom {
+	background-color: #C6BB82;
+	margin-top: 51px;
+	height: 125px;
+	width: 552px;
+	margin-left: -91px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	position: relative;
+	z-index: -2;
+	-webkit-transform: rotateX(-1deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(-1deg);
+}
+
+/*
+#switch {
+  height: 55px;
+  background-color: black;
+}
+*/
+
+#toggle_hole {
+	width: 20px;
+	height: 40px;
+	margin: 5px 0 0 20px; 
+	background-color: black;
+	position: absolute;
+	z-index: 2;
+}
+
+#toggle_switch {
+	width: 20px;
+	height: 20px;
+	background-color: #111;
+	box-shadow: 3px -4px #111;
+	position: relative;
+	z-index: 3;
+	margin-top: 0px;
+
+}
+
+.switch_titles {
+	font-size: 16px;
+	position: absolute;
+	color: black;
+	font-family: 'Share Tech Mono', monospace;
+	text-shadow: 1px 1px 3px #000;
+  letter-spacing: 2px;
+}
+
+#datamath {
+	color: #FFF8DC;
+	font-size: 25px;
+	text-align: right;
+	margin-left: 20px!important;
+}
+
+#switch_title {
+	margin: -5px 0 0 5px;
+}
+
+#const_title {
+	margin: 45px 0 0 5px;
+	
+}
+
+#te_logo {
+	width: 60px;
+	position: absolute;
+	margin-top: -10px;
+}

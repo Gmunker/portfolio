@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Javascript project for FreeCodeCamp, functioning Javascript calacultor styled with HTML/CSS/Bootstrap">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>.munkerDesigns Calcultor</title>
+
+				<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
+				<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Overlock' rel='stylesheet' type='text/css'>
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/new_style.css">
+    </head>
+    <body>
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+  <div class="container-fluid">
+    <div class="row">
+      <a id="logo" href="http://www.munkerdesigns.com" target=_blank><h2  class='mono'>.munkerDesigns();</h2></a>
+      <span class="glyphicon glyphicon-book pull-right" data-toggle="modal" data-target="#js_cal_Modal" id="manual-link" aria-hidden="true"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="calculator_body">
+
+  <!--Body Hood-->
+  <div class="row" id="body_hood">
+    <div class="col-xs-offset-2 col-xs-1 body_hood_left">
+    </div>
+    <div class="col-xs-6 body_hood_middle">
+    </div>
+    <div class="col-xs-1 body_hood_right">
+    </div>
+  </div>
+  <!--/.row #body_hood-->
+  <!--End Body Hood-->
+
+  <div class="row" id="display">
+    <div class="col-xs-12 display" id="display_text">0.</div>
+  </div>
+
+  <!--Main Calculator-->
+  <div class="row" id="keypad">
+    <div class="col-xs-12 branding">
+      <div class="col-xs-offset-1 col-xs-1">
+        <img id="te_logo" src="http://hotline.ccsinsight.com/_images-article/TI_logo.png" />
+      </div>
+      <div class="col-xs-9" id="datamath">
+        <p>Datamath</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn ce row5 left_btn" id="clear_entry">
+          <p>CE</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn row5 op" id="divide">
+          <p>&divide;</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn row5 op" id="multiple">
+          <p>X</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div id="switch">
+          <div class="switch_titles" id="switch_title">
+            <p>chain</p>
+          </div>
+          <div id="toggle_hole">
+            <div id="toggle_switch">
+
+            </div>
+          </div>
+          <div class="switch_titles" id="const_title">
+            <p>const</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input num_left row4 left_btn">
+          <p>7</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row4" id="eight">
+          <p>8</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row4">
+          <p>9</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row4 right_btn c">
+          <p>C</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class=" cal_btn number input num_left row3 left_btn">
+          <p>4</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row3">
+          <p>5</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row3">
+          <p>6</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row3 right_btn neg">
+          <p>-</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input num_left row2 left_btn">
+          <p>1</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row2">
+          <p>2</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input row2">
+          <p>3</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row2 right_btn op">
+          <p>+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number input num_left row1 left_btn" id="zero">
+          <p class="row5_p">0</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn number row1 decimal" id="decimal">
+          <p class="row5_p">.</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="cal_btn row1 right_btn equal" id="equals">
+          <p class="row5_p">=</p>
+        </div>
+      </div>
+      <div class="butt col-xs-offset-1 col-xs-1">
+        <div class="row1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="bottom">
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="js_cal_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Texas Instruments TI-2500B</h4>
+      </div>
+      <div class="modal-body">
+        
+        <p>This calcualtor is designed on the TI-2500B, one of the first handheld calculators from TI. The manual will be added shortly.</p>
+        
+        <img src="http://www.vintagecalculators.com/assets/images/TI2500B_1.jpg" />
+      
+      </div>
+      <div class="modal-footer">
+        <p>munkerDesigns();</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+    	<!--Scripts-->
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
