@@ -26,7 +26,6 @@ img {
 }
 
 .toolbox {
-  height: 100vh;
 }
 
 .toolbox h2 {
@@ -149,13 +148,17 @@ img {
   width: 100px;
 }
 
-body .modal-chop {
+body .modal-chop, .modal-pomo {
     /* new custom width */
-    max-width: 1000px;
+    max-width: 1100px;
     /* must be half of the width, minus scrollbar on the left (30px) */
     margin: 0 auto;
 }
 
 .modal-chop .well {
+  max-width: 800px;
+}
+
+.modal-pomo #controls{
   max-width: 800px;
 }

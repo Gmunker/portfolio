@@ -1,116 +1,88 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pomodoro Clock</title>
+<div class="container">
+    <header class="row">
+        <div class="col-md-offset-3 col-md-1">
+            <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="modal" data-target="#pomoModal" id="pomo-modal"></span>
+        </div>
+        <div class="col-md-5" id="header">
+            <h1> Pomodoro Clock </h1>
+        </div>
+        <div class="col-md-2">
+            <span class="glyphicon glyphicon-option-vertical" aria-hidden="true" data-toggle="modal" data-target="#myModal" id="menu-dots-md"></span>
+        </div>
+    </header>
 
-        <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+    <div class="row" id="contols">
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!--Break Button-->
+        <div class="col-md-offset-2 col-md-2 time-set">
+            <div class="row" id="break-time-btn">
+                <div class="col-md-8" id="break-value">5</div>
+                <div class="col-md-4">
+                    <div class="row" id="break-up">
+                        <span class="glyphicon glyphicon-menu-up time-change-btn" aria-hidden="true" id="break-up"></span>
+                    </div>
+                    <div class="row" id="break-down">
+                        <span class="glyphicon glyphicon-menu-down time-change-btn" aria-hidden="true" id="break-down"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <!--Start/Pause Button-->
+        <div class="col-md-4 time-set">
+            <div id="start-stop-btn">
+                <div class="" id="start-stop-value"></div>
+            </div>
+        </div>
 
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+        <!--work Button-->
+        <div class="col-md-4 time-set">
+            <div id="work-time-btn">
+                <div class="col-md-8" id="work-value">25</div>
+                <div class="col-md-4">
+                    <div class="row" id="work-up">
+                        <span class="glyphicon glyphicon-menu-up time-change-btn" aria-hidden="true" id="work-up"></span>
+                    </div>
+                    <div class="row" id="work-down">
+                        <span class="glyphicon glyphicon-menu-down time-change-btn" aria-hidden="true" id="work-down"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div id="header">
-  <div class="container-fluid">
-    <div class="row">
-      <a id="logo" href="http://www.munkerdesigns.com" target=_blank><h2  class='mono'>.munkerDesigns();</h2></a>
+
     </div>
-  </div>
+
+    <div class="row" id="work-time-display">
+        <p id="work-time"></p>
+    </div>
+    <div class="row" id="break-time-display">
+        <p id="break-time"></p>
+    </div>
+
+    <div class="" id="chart">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="row">
+        <div class="reset-button" id="reset">Reset</div>
+    </div>
+
 </div>
 
-<div class="container">
-            <header class="row">
-                <div class="col-md-offset-3 col-md-1">
-                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="modal" data-target="#pomoModal" id="pomo-modal"></span>
-                </div> 
-                <div class="col-md-5" id="header">
-                    <h1> Pomodoro Clock </h1>                    
-                </div>
-                <div class="col-md-2">
-                    <span class="glyphicon glyphicon-option-vertical" aria-hidden="true" data-toggle="modal" data-target="#myModal" id="menu-dots-md"></span>
-                </div>
-            </header>
-
-            <div class="row" id="contols">
-                    
-                    <!--Break Button-->
-                    <div class="col-md-offset-2 col-md-2 time-set" >
-                        <div class="row" id="break-time-btn">
-                            <div class="col-md-8" id="break-value">5</div>
-                            <div class="col-md-4">
-                                <div class="row" id="break-up">
-                                    <span class="glyphicon glyphicon-menu-up time-change-btn" aria-hidden="true" id="break-up"></span>
-                                </div>
-                                <div class="row" id="break-down">
-                                    <span class="glyphicon glyphicon-menu-down time-change-btn" aria-hidden="true" id="break-down"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Start/Pause Button-->
-                    <div class="col-md-4 time-set" >
-                    <div id="start-stop-btn">
-                        <div class="" id="start-stop-value"></div>
-                    </div>
-                    </div>
-
-                    <!--work Button-->
-                    <div class="col-md-4 time-set" >
-                        <div id="work-time-btn">
-                        <div class="col-md-8" id="work-value">25</div>
-                            <div class="col-md-4">
-                                <div class="row" id="work-up">
-                                    <span class="glyphicon glyphicon-menu-up time-change-btn" aria-hidden="true" id="work-up"></span>
-                                </div>
-                                <div class="row" id="work-down">
-                                    <span class="glyphicon glyphicon-menu-down time-change-btn" aria-hidden="true" id="work-down"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 
-            </div>
-
-            <div class="row" id="work-time-display">
-                <p id="work-time"></p>
-            </div>
-            <div class="row" id="break-time-display">
-                <p id="break-time"></p>
-            </div>
-            
-            <div class="" id="chart">
-                <canvas id="myChart"></canvas>
-            </div>
-
-            <div class="row">
-                <div class="reset-button" id="reset">Reset</div>
-            </div>
-
-    </div>
-
-         
-
-        <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Settings</h4>
-              </div>
-              <div class="modal-body">
-                
+            </div>
+            <div class="modal-body">
+
                 <div class="container">
-                    
+
                     <div class="options" id="auto-reset">
                         <h3>Auto Reset</h3>
                     </div>
@@ -139,59 +111,41 @@
                     </div>
                 </div>
 
-              </div>
-              <div class="modal-footer">
-                <p>munkerDesigns(2016);</p>
-              </div>
             </div>
-          </div>
+            <div class="modal-footer">
+                <p>munkerDesigns(2016);</p>
+            </div>
         </div>
+    </div>
+</div>
 
-         <div class="modal fade bs-example-modal-lg" id="pomoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
+<div class="modal fade bs-example-modal-lg" id="pomoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Settings</h4>
-              </div>
-              <div class="modal-body">
-                
-               
-                            <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. These intervals are named pomodoros, the plural in English of the Italian word pomodoro (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student. The method is based on the idea that frequent breaks can improve mental agility.</p>
-                            <p>Closely related to concepts such as timeboxing and iterative and incremental development used in software design, the method has been adopted in pair programming contexts.</p>
-                
-
-              </div>
-              <div class="modal-footer">
-                <p>munkerDesigns(2016);</p>
-              </div>
             </div>
-          </div>
+            <div class="modal-body">
+
+
+                <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The
+                    technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated
+                    by short breaks. These intervals are named pomodoros, the plural in English of the Italian word pomodoro
+                    (tomato), after the tomato-shaped kitchen timer that Cirillo used as a university student. The method
+                    is based on the idea that frequent breaks can improve mental agility.</p>
+                <p>Closely related to concepts such as timeboxing and iterative and incremental development used in software
+                    design, the method has been adopted in pair programming contexts.</p>
+
+
+            </div>
+            <div class="modal-footer">
+                <p>munkerDesigns(2016);</p>
+            </div>
         </div>
+    </div>
+</div>
 
-        <audio id="audioAlarm">
-            <source src="http://soundbible.com/grab.php?id=1633&type=wav" type="audio/wav">
-        </audio>
-
-           
-                
-           
-
-        </div><!--/.container-->
-<!--Scripts-->
-
-        <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-
-        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
-
-        <!-- Latest compiled and minified Bootstrap JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
-
-
-        <script src="js/main.js"></script>
-
-    </body>
-</html> 
+<audio id="audioAlarm">
+    <source src="http://soundbible.com/grab.php?id=1633&type=wav" type="audio/wav">
+</audio>
