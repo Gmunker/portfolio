@@ -1,0 +1,371 @@
+#simon_Modal .modal-body {
+	background-image: url("../images/simon/carpet1.jpg");
+	background-repeat: repeat;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+
+	.simon_container .col-xs-8 {
+		height: 800px;
+	}
+
+	#device {
+		#play-area {
+	position: relative;
+	z-index: 2;
+	width: 300px;
+	height: 300px;
+	top: 50px;
+	left: 75px;
+	background-image: url('../images/simon/black-plastic.jpg');
+	border-radius: 50%;
+	box-shadow: -5px 1px 30px #000;
+}
+	}
+
+}
+ 
+
+
+
+#play-area-buttons {
+	margin-left: 14px;
+	margin-top: 1px;
+}
+
+.play-area-sections {
+	margin-top: 13px;
+	height: 120px;
+	width: 120px;
+	display: inline-flex;
+	margin: 3px solid black;
+	box-shadow: inset 0px 0px 2px #000, 0px 0px 4px #000;
+	border: 1px solid #000;
+}
+
+.play-area-sections:active {
+	box-shadow: inset 3px 3px 8px #000, 0px 0px 0px #000;
+}
+
+#top-left {
+	border-top-left-radius: 100%;
+	margin-left: 20px;
+	margin-top: 20px;
+	background-color: #BF0000;
+}
+
+
+
+#top-right {
+	border-top-right-radius: 100%;
+	margin-left: 15px;
+	background-color: #0000BF;
+}
+
+
+#bottom-left {
+	border-bottom-left-radius: 100%;
+	margin-left: 20px;
+	background-color: #006600;
+}
+
+
+#bottom-right {
+	border-bottom-right-radius: 100%;
+	margin-left: 15px;
+	background-color: #BFBF00;
+}
+
+
+#center-circle {
+	position: absolute;
+	z-index: 0;
+	height: 125px;
+	width: 125px;
+	background-image: url('../images/simon/black-plastic.jpg');
+	border-radius: 50%;
+	top: 85px;
+	left: 88px;
+	box-shadow: 0px 0px 5px #333;
+}
+
+#label {
+	background-image: url('../images/simon/stainless-back.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin-top: 12px;
+	margin-left: 12px;
+}
+
+#label-border {
+	border: 2px solid #000;
+	width: 60px;
+	height: 50px;
+	margin-top: 20px;
+	margin-left: 20px;
+	position: absolute;
+	z-index: 0;
+	border-radius: 5px;
+}
+
+#mb {
+	font-size: 35px;
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+#electronics {
+	font-family: 'Share Tech Mono', monospace;
+	text-align: center;
+	margin-top: -10px;
+	font-size: 8px;
+	font-style: italic;
+}
+
+.red-text {
+	color: red;
+}
+
+.blue-text {
+	color: blue;
+}
+
+#nub {
+	height: 10px;
+	width: 10px;
+	background-image: url('../images/simon/black-plastic.jpg');
+	position: absolute;
+	z-index: 0;
+	top: 6px;
+	left: 56px;
+	border-bottom-left-radius: 80%;
+	border-bottom-right-radius: 80%;
+}
+
+
+#control-area {
+	height: 300px;
+	width: 260px;
+	background-image: url('../images/simon/black-plastic.jpg');
+	background-position: bottom ;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	bottom: 30px;
+	left: 45px;
+	margin-left: 50px;
+	border-bottom-left-radius: 7%;
+	border-bottom-right-radius: 7%;
+	box-shadow: -5px 1px 20px #000;
+}
+
+#control-area-background {
+	width: 210px;
+	height: 250px;
+	background-image: url("http://webdesignandsuch.com/posts/stainless/1.jpg");
+	background-position: center;
+	background-repeat: repeat-y;
+	margin-left: 25px;
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px #000;
+}
+
+#controls {
+	top: 100px;;
+	position: absolute;
+}
+
+.control-area-row {
+	height: 40px;
+	margin-top: 2px;
+	margin-left: 10px;
+	width: 250px;
+}
+
+#buttons {
+	height: 30px;
+}
+
+#switches {
+	height: 30px;
+}
+
+#title {
+	height: 60px;
+}
+
+.button {
+	background-color: #000;
+	position: relative;
+	z-index: 2;
+	height: 30px;
+	width: 30px;
+	margin-left: 23px;
+	border-radius: 50%;
+	display: inline-flex;
+}
+
+.button-push {
+	height: 18px;
+	width: 18px;
+	border-radius: 50px;
+	margin-left: 6px;
+	margin-top: 6px;
+	box-shadow: -1px 1px 10px #333;	
+}
+
+.button-push:active {
+	box-shadow: inset -1px 1px 10px #000;
+}
+
+.blueBtn {
+	background-color: blue;
+}
+
+.redBtn {
+	background-color: red;
+}
+
+.control-label {
+	bottom: 20px;
+	position: relative;
+	font-size: 10px;
+	font-family: 'Istok Web', sans-serif;
+}
+
+#last-label {
+	margin-left: -4px;
+}
+
+#start-label {
+	margin-left: -9px!important
+}
+
+#longest-label {
+	margin-left: -15px!important;
+}
+
+.switch {
+	background-image: url('../images/simon/black-plastic.jpg');
+	border-radius: 3px;
+	height: 20px;
+	margin-top: 20px;
+}
+
+#game-switch {
+	margin-left: 0px;
+}
+
+#skill-switch {
+	margin-left: 65px;	
+}
+
+.switch-hole {
+	height: 10px;
+	width: 45px;
+	margin-left: 8px;
+	margin-top: 5px;
+	background-color: #000;
+}
+
+#game-switch-label1 {
+	position: relative;
+	top: 10px;
+	left: 3px;
+}
+
+#game-num {
+	margin-left: 5px;
+}
+
+#game-switch-label2 {
+	position: relative;
+	top: 1px;
+	left: 28px;
+}
+
+#skill-switch-label1 {
+	position: relative;
+	left: 10px;
+	top: 10px;
+	letter-spacing: 1px;
+}
+
+#skill-switch-label2 {
+	position: relative;
+	top: 1px;
+}
+
+#title {
+	margin-left: 20px;
+	position: absolute;
+	font-family: 'Titan One', cursive;
+}
+
+#control-title-pocket {
+	position: relative;
+	font-size: 24px;
+	left: 50px;
+	top: 28px;
+}
+
+#control-title-simon {
+	position: relative;
+	font-size: 35px;
+	left: 35px;
+	top: 5px;
+}
+
+.switch-toggle {
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	margin-top: -2px;
+	margin-left: -5px;
+	margin-right: -5px;
+	background: -webkit-repeating-linear-gradient(left, #111, #333 10%, #666 20%);
+}
+
+.switch-pos {
+	height: 10px;
+	width: 10px;
+	background-color: transparent;
+	position: absolute;
+	z-index: -2;
+}
+
+#game-off-pos {
+	width: 20px!important;
+}
+#game-1-pos {
+	margin-left: 20px;
+}
+#game-2-pos {
+	margin-left: 30px;
+}
+#game-3-pos {
+	margin-left: 40px;
+}
+
+#skill-1-pos {
+	margin-left: 0px;
+}
+#skill-2-pos {
+	margin-left: 10px;
+}
+#skill-3-pos {
+	margin-left: 20px;
+}
+#skill-4-pos {
+	margin-left: 33px;
+}
