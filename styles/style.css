@@ -1,61 +1,69 @@
-header {
-  height: 100vh;
-}
-
 img {
-  filter: grayscale(100%)
-  }
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
-.buttons {
-  width: 500px;
-  height: 100px;
+#landing {
+  background-color: blue;
   position: relative;
-  margin: 50px auto;
-  font-size: 50px;
-}
+  min-height: 100vh;
+  top: 150px; }
+  #landing .buttons {
+    position: relative;
+    margin: 50px auto;
+    font-size: 30px; }
+  #landing a {
+    color: black; }
 
-.buttons:hover {
-  animation-name: button_background;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
+#about_me {
+  background-color: beige;
+  position: relative;
+  min-height: 100vh; }
+  #about_me .col-xs-12 {
+    top: 150px; }
+  #about_me .about_me_webDev_algo {
+    font-family: initial;
+    margin: 0 !important; }
+  #about_me button {
+    position: relative;
+    background-color: transparent;
+    border-radius: 0 !important;
+    font-size: 20px; }
+  #about_me img:hover {
+    -webkit-animation-name: img_hover;
+    animation-name: img_hover;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
 
-@keyframes button_background {
-  100% {background-color: black}
-}
-
-.toolbox {
-}
+#toolbox {
+  background-color: green;
+  min-height: 100vh; }
+  #toolbox .toolbox-container {
+    position: relative; }
 
 .toolbox h2 {
   margin: 40px auto;
-  font-size: 60px;
-}
-
-.toolbox_progress_bar_title {
-  /*display: flex;*/
-}
+  font-size: 60px; }
 
 .toolbox_progress_bar_title img {
   position: relative;
   top: 5px;
-  height: 75px;
-}
+  height: 75px; }
 
 .router_logo {
   position: relative;
-  top: 20px!important;
-  height: 50px!important;
-  width: 75px;
-}
+  top: 20px !important;
+  height: 50px !important;
+  width: 75px; }
 
 .npm_logo {
   position: relative;
-  top: 20px!important;
-  height: 50px!important;
-  width: 75px;
-}
+  top: 20px !important;
+  height: 50px !important;
+  width: 75px; }
 
 .toolbox_progress_bar {
   height: 20px;
@@ -65,8 +73,7 @@ img {
   background-image: -webkit-linear-gradient(left, black 55%, white 10%);
   background-image: -moz-linear-gradient(left, black 55%, white 10%);
   background-image: linear-gradient(to right, black 55%, white 10%);
-  box-shadow: inset 1px 1px 10px #ccc;
-}
+  box-shadow: inset 1px 1px 10px #ccc; }
 
 .toolbox_progress_bar_position {
   height: 40px;
@@ -76,96 +83,85 @@ img {
   position: relative;
   left: 50%;
   bottom: 10px;
-  color: white;
-}
+  color: white; }
 
 .toolbox_progress_bar_position p {
   position: relative;
   text-align: center;
   top: 10px;
-  font-size: 14px;  
-}
+  font-size: 14px; }
 
-.projects {
+#projects {
   position: relative;
-  top: 50px;
-}
+  min-height: 100vh;
+  background-color: red; }
+  #projects .well {
+    margin-top: 30px; }
 
-#projects .well {
-  margin-top: 30px;
-}
-
-.project img {
+#project img {
   /*height: 300px;*/
-  filter: grayscale(100%)
-}
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
-.project img:hover {
+#project img:hover {
+  -webkit-animation-name: img_hover;
   animation-name: img_hover;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+
+@-webkit-keyframes img_hover {
+  100% {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); } }
 
 @keyframes img_hover {
-  100% {filter: grayscale(0%)}
-}
+  100% {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); } }
 
 .bold {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-#about_me {
-  height: 120vh;
-  position: relative;
-}
-
-.about_me_webDev_algo {
-  font-family: initial;
- margin: 0!important;
-}
-
-
-#about_me .btn {
-  position: relative;
-  margin: 10px 0;
-  background-color: transparent;
-  border-radius: 0!important;
-  font-size: 25px;
-  padding: 5;
-
-}
-
-#about_me img:hover {
-  animation-name: img_hover;
-  animation-duration: .5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
+#contact_me {
+  min-height: 100vh;
+  background-color: rgba(233, 233, 100, 0.5); }
 
 .chop_tribute {
   position: relative;
-  width: 100px;
-}
+  width: 100px; }
 
 body .modal-chop, .modal-pomo {
-    /* new custom width */
-    max-width: 1100px;
-    /* must be half of the width, minus scrollbar on the left (30px) */
-    margin: 0 auto;
-}
+  /* new custom width */
+  max-width: 1100px;
+  /* must be half of the width, minus scrollbar on the left (30px) */
+  margin: 0 auto; }
 
 body .modal-simon {
-    /* new custom width */
-    max-width: 820px;
-    /* must be half of the width, minus scrollbar on the left (30px) */
-    margin: 0 auto;
-}
+  /* new custom width */
+  max-width: 820px;
+  /* must be half of the width, minus scrollbar on the left (30px) */
+  margin: 0 auto; }
 
 .modal-chop .well {
-  max-width: 800px;
-}
+  max-width: 800px; }
 
-.modal-pomo #controls{
-  max-width: 800px;
-}
+.modal-pomo #controls {
+  max-width: 800px; }
+
+#projects {
+  position: relative;
+  top: 30vh; }
+  #projects .well {
+    border-radius: 0; }
+  #projects .panel-group .panel {
+    border-radius: 0; }
+  #projects .panel-group .panel-heading {
+    background-color: #ccc;
+    border-radius: 0; }
+  #projects .panel-group a {
+    text-decoration: none;
+    color: black; }

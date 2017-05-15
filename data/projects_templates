@@ -1,0 +1,144 @@
+ <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <img class="project_image img-responsive" src="images/chop_tribute.png" data-toggle="modal" data-target="#chop_tribute_Modal"
+          />
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">Tribute Page</h4>
+            <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> I can view a tribute page with an image and text.</li>
+              <li><span class="bold">User Story:</span> I can click on a link that will take me to an external website with further information on the topic.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <img class="project_image img-responsive" src="images/js_cal.png" data-toggle="modal" data-target="#js_cal_Modal" />
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">Javascript Calculator</h4>
+            <h6 class="text-center">Advanced Front-End Developement Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> I can add, subtract, multiply and divide two numbers.</li>
+                <li><span class="bold">User Story:</span> I can clear the input field with a clear button.</li>
+                <li><span class="bold">User Story:</span> I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <img class="project_image img-responsive" src="images/pomo.png" data-toggle="modal" data-target="#pomo_Modal" />
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">Pomodoro Clock</h4>
+            <h6 class="text-center">Advanced Front-End Developement Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span>  I can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed.</li>
+                <li><span class="bold">User Story:</span> I can reset the clock for my next pomodoro.</li>
+                <li><span class="bold">User Story:</span> I can customize the length of each pomodoro.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <img class="project_image img-responsive" src="images/simon_game.png" data-toggle="modal" data-target="#simon_Modal" />
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">1978 Pocket Simon Game</h4>
+            <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> I am presented with a random series of button presses.
+                <li><span class="bold">User Story:</span> Each time I input a series of button presses correctly, I see the same
+                  series of button presses but with an additional step.</li>
+                <li><span class="bold">User Story:</span> I hear a sound that corresponds to each button both when the series
+                  of button presses plays, and when I personally press a button.</li>
+                <li><span class="bold">User Story:</span> If I press the wrong button, I am notified that I have done so, and
+                  that series of button presses starts again to remind me of the pattern so I can try again.</li>
+                <li><span class="bold">User Story:</span> I can see how many steps are in the current series of button presses.</li>
+                <li><span class="bold">User Story:</span> If I want to restart, I can hit a button to do so, and the game will
+                  return to a single step.</li>
+                <li><span class="bold">User Story:</span> I can play in strict mode where if I get a button press wrong, it notifies
+                  me that I have done so, and the game restarts at a new random series of button presses.</li>
+                <li><span class="bold">User Story:</span> I can win the game by getting a series of 20 steps correct. I am notified
+                  of my victory, then the game starts over.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <a href="http://gmunker-markdownapp.herokuapp.com/">
+            <img class="project_image img-responsive" src="images/markdown.png" />
+          </a>
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">Markdown Previewer</h4>
+            <h6 class="text-center">React Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> I can type GitHub-flavored Markdown into a text area.</li>
+                <li><span class="bold">User Story:</span> I can see a preview of the output of my markdown that is updated as I type.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <a href="http://gmunker-fcc-leaderboard.herokuapp.com/">
+            <img class="project_image img-responsive" src="images/fcc_leader_board.png" />
+          </a>          <hr>
+          <div class="project_title">
+            <h4 class="text-center">FreeCodeCamp Camper Leaderboard</h4>
+            <h6 class="text-center">React Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> I can see a table of the Free Code Camp campers who've earned the most brownie points in the past 30 days.</li>
+                <li><span class="bold">User Story:</span> I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.</li>
+                <li><span class="bold">User Story:</span> I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <a href="https://gmunker-reacttimer.herokuapp.com/">
+            <img class="project_image img-responsive" src="images/react_timer.png" />
+          </a>
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">React Timer & Countdown App</h4>
+            <h6 class="text-center">Udemy: The Complete React Developer Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> Create a timer app that has both a timer and countdown tab</li>
+                <li><span class="bold">User Story:</span> It must have a Start / Stop button that switches on mouse 
+                click, and it must stop and start the current timer weather it is the timer or countdown timer.</li>
+                <li><span class="bold">User Story:</span> It must have a clear button which zeroes out the timer app, 
+                and on the countdown app returns to input.</li>
+                <li><span class="bold">User Story:</span> Countdown app must start with an input field and start button,
+                once started it must switch to the start/stop combo for the timer.</li>
+                <li><span class="bold">User Story:</span> Create test cases to ensure everything works properly.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+          <a href="http://gmunker-reacttodo.herokuapp.com/">
+            <img class="project_image img-responsive" src="" />
+          </a>
+          <hr>
+          <div class="project_title">
+            <h4 class="text-center">1978 Pocket Simon Game</h4>
+            <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
+            <ul>
+              <li><span class="bold">User Story:</span> I am presented with a random series of button presses.
+                <li><span class="bold">User Story:</span> Each time I input a series of button presses correctly, I see the same
+                  series of button presses but with an additional step.</li>
+                <li><span class="bold">User Story:</span> I hear a sound that corresponds to each button both when the series
+                  of button presses plays, and when I personally press a button.</li>
+                <li><span class="bold">User Story:</span> If I press the wrong button, I am notified that I have done so, and
+                  that series of button presses starts again to remind me of the pattern so I can try again.</li>
+                <li><span class="bold">User Story:</span> I can see how many steps are in the current series of button presses.</li>
+                <li><span class="bold">User Story:</span> If I want to restart, I can hit a button to do so, and the game will
+                  return to a single step.</li>
+                <li><span class="bold">User Story:</span> I can play in strict mode where if I get a button press wrong, it notifies
+                  me that I have done so, and the game restarts at a new random series of button presses.</li>
+                <li><span class="bold">User Story:</span> I can win the game by getting a series of 20 steps correct. I am notified
+                  of my victory, then the game starts over.</li>
+            </ul>
+          </div>
+        </div>

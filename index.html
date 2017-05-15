@@ -27,41 +27,45 @@
   <nav id="top"></nav>
 
   <div class="container">
-    <header class="row intro text-center">
-      <h1 class="intro_name">Hello, I'm Greg Munker</h1>
-      <h2 class="intro_title">Front-End Developer</h2>
-      <h4 class="intro_subtext">Sometimes simple speaks volumes...</h4>
 
-      <div class="buttons" id="about_button">
-        <p class="buttons-text"><a href="#about_me">About Me...</a></p>
-      </div>
-      <div class="buttons" id="contact_button">
-        <p class="buttons-text"><a href="#toolbox">Toolbox...</a></p>
-      </div>
-      <div class="buttons" id="projects_button">
-        <p class="buttons-text"><a href="#projects">Projects...</a></p>
-      </div>
-      <div class="buttons" id="contact_button">
-        <p class="buttons-text"><a href="#contact_me">Contact Me...</a></p>
-      </div>
-    </header>
+    <section id="landing" class="col-xs-12 intro text-center row">
+      <div class="row">
+        <h1 class="intro_name text-center">Hello, I'm Greg Munker</h1>
+        <h2 class="intro_title">Front-End Developer</h2>
+        <h4 class="intro_subtext">Sometimes simple speaks volumes</h4>
+        </div>
+        <div class="row">
+          <div class="buttons row" id="about_button">
+            <p class="buttons-text"><a href="#about_me">About Me...</a></p>
+          </div>
+          <div class="buttons row" id="toolbox_button">
+            <p class="buttons-text"><a href="#toolbox">Toolbox...</a></p>
+          </div>
+          <div class="buttons row" id="projects_button">
+            <p class="buttons-text"><a href="#projects">Projects...</a></p>
+          </div>
+          <div class="buttons row" id="contact_button">
+            <p class="buttons-text"><a href="#contact_me">Contact Me...</a></p>
+          </div>
+        </div>
+    </section>
 
-    <section id="about_me" class="about_me row">
-      <div class="col-sm-12">
+    <section id="about_me" class="col-xs-12 row">
+      <div class="col-xs-12">
         <div class="row">
           <div class="col-xs-12 col-md-4">
             <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#Personal_Modal">
               Personal
             </button>
-            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#Edu_Modal">
-              Education
+            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#webDevs_Modal">
+              webDevs(online, studyGroup);
             </button>
           </div>
-          <img class="img-responsive col-xs-12 col-md-4" src="images/GregFamily.jpg" />
+          <img class="img-responsive col-xs-10 col-xs-offset-1 col-md-offset-0 col-md-4" src="images/GregFamily.jpg" />
           <div class="col-xs-12 col-md-4">
-            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#webDevs_Modal">
-              webDevs(inTraining, online, studyGroup);
-            </button>
+            <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#Edu_Modal">
+              Education
+            </button>            
             <button type="button" class="btn btn-lg col-xs-12" data-toggle="modal" data-target="#FCC_Maricopa_Modal">
               FreeCodeCamp Maricopa, AZ
             </button>
@@ -70,16 +74,14 @@
       </div>
     </section>
 
-    <section class="toolbox row" id="toolbox">
-      <h2 class="text-center">My Toolbox</h2>
-      <div class="row">
-        <div class="col-sm-12">
+    <section id="toolbox" class="col-xs-12 row">
+        <div class="col-xs-12 toolbox-container">
           <div class="row">
-            <div class="toolbox_progress_bar_title col-sm-2 col-lg-1 col-lg-offset-1">
+            <div class="toolbox_progress_bar_title col-sm-2">
               <img class="html5_logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/HTML5_logo_black.svg/1024px-HTML5_logo_black.svg.png"
               />
             </div>
-            <div class="toolbox_progress_bar col-sm-9">
+            <div class="toolbox_progress_bar col-xs-12 col-sm-9">
               <div class="toolbox_progress_bar_position"></div>
             </div>
           </div>
@@ -204,162 +206,265 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
 
-    <section id="projects" class="projects row">
-      <div class="col-sm-12">
+    <section id="projects" class="col-xs-12 row">
+
+      <div class="col-xs-10 col-xs-offset-1">
         <h2 class="text-center">My Projects</h2>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_tribute" aria-expanded="false"
+              aria-controls="collapse_tribute">
+              <div class="panel-heading" role="tab" id="tribute-collapse-heading">
+                <h4 class="panel-title">
+                  Tribute Page
+                </h4>
+              </div>
+            </a>
+            <div id="collapse_tribute" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+                  <img class="project_image img-responsive" src="images/chop_tribute.png" data-toggle="modal" data-target="#chop_tribute_Modal"
+                  />
+                  <hr>
+                  <div class="project_title">
+                    <h4 class="text-center">Tribute Page</h4>
+                    <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
+                    <ul>
+                      <li><span class="bold">User Story:</span> I can view a tribute page with an image and text.</li>
+                      <li><span class="bold">User Story:</span> I can click on a link that will take me to an external website
+                        with further information on the topic.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_js_cal" aria-expanded="false" aria-controls="collapse_js_cal">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  Javascript Calculator
+                </h4>
+              </div>
+            </a>
+            <div id="collapse_js_cal" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+                  <img class="project_image img-responsive" src="images/js_cal.png" data-toggle="modal" data-target="#js_cal_Modal" />
+                  <hr>
+                  <div class="project_title">
+                    <h4 class="text-center">Javascript Calculator</h4>
+                    <h6 class="text-center">Advanced Front-End Developement Project of the FreeCodeCamp Course.</h6>
+                    <ul>
+                      <li><span class="bold">User Story:</span> I can add, subtract, multiply and divide two numbers.</li>
+                      <li><span class="bold">User Story:</span> I can clear the input field with a clear button.</li>
+                      <li><span class="bold">User Story:</span> I can keep chaining mathematical operations together until I
+                        hit the equal button, and the calculator will tell me the correct output.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_pomo" aria-expanded="false"
+              aria-controls="collapse_pomo">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  Pomodoro Clock
+                </h4>
+              </div>
+            </a>
+            <div id="collapse_pomo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+                  <img class="project_image img-responsive" src="images/pomo.png" data-toggle="modal" data-target="#pomo_Modal" />
+                  <hr>
+                  <div class="project_title">
+                    <h4 class="text-center">Pomodoro Clock</h4>
+                    <h6 class="text-center">Advanced Front-End Developement Project of the FreeCodeCamp Course.</h6>
+                    <ul>
+                      <li><span class="bold">User Story:</span> I can start a 25 minute pomodoro, and the timer will go off once
+                        25 minutes has elapsed.</li>
+                      <li><span class="bold">User Story:</span> I can reset the clock for my next pomodoro.</li>
+                      <li><span class="bold">User Story:</span> I can customize the length of each pomodoro.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <img class="project_image img-responsive" src="images/chop_tribute.png" data-toggle="modal" data-target="#chop_tribute_Modal"
-          />
-          <hr>
-          <div class="project_title">
-            <h4 class="text-center">Tribute Page</h4>
-            <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span> I can view a tribute page with an image and text.</li>
-              <li><span class="bold">User Story:</span> I can click on a link that will take me to an external website with further information on the topic.</li>
-            </ul>
+          <div class="panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_simon" aria-expanded="false"
+              aria-controls="collapse_simon">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  Simon Game
+                </h4>
+              </div>
+            </a>
+            <div id="collapse_simon" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+                  <img class="project_image img-responsive" src="images/simon_game.png" data-toggle="modal" data-target="#simon_Modal" />
+                  <hr>
+                  <div class="project_title">
+                    <h4 class="text-center">1978 Pocket Simon Game</h4>
+                    <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
+                    <ul>
+                      <li><span class="bold">User Story:</span> I am presented with a random series of button presses.
+                        <li><span class="bold">User Story:</span> Each time I input a series of button presses correctly, I see
+                          the same series of button presses but with an additional step.</li>
+                        <li><span class="bold">User Story:</span> I hear a sound that corresponds to each button both when the
+                          series of button presses plays, and when I personally press a button.</li>
+                        <li><span class="bold">User Story:</span> If I press the wrong button, I am notified that I have done
+                          so, and that series of button presses starts again to remind me of the pattern so I can try again.</li>
+                        <li><span class="bold">User Story:</span> I can see how many steps are in the current series of button
+                          presses.</li>
+                        <li><span class="bold">User Story:</span> If I want to restart, I can hit a button to do so, and the
+                          game will return to a single step.</li>
+                        <li><span class="bold">User Story:</span> I can play in strict mode where if I get a button press wrong,
+                          it notifies me that I have done so, and the game restarts at a new random series of button presses.</li>
+                        <li><span class="bold">User Story:</span> I can win the game by getting a series of 20 steps correct.
+                          I am notified of my victory, then the game starts over.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_markdown" aria-expanded="false"
+              aria-controls="collapse_markdown">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  GitHub Markdown Previewer
+                </h4>
+              </div>
+            </a>
+            <div id="collapse_markdown" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+                  <a href="http://gmunker-markdownapp.herokuapp.com/">
+                    <img class="project_image img-responsive" src="images/markdown.png" />
+                  </a>
+                  <hr>
+                  <div class="project_title">
+                    <h4 class="text-center">Markdown Previewer</h4>
+                    <h6 class="text-center">React Project of the FreeCodeCamp Course.</h6>
+                    <ul>
+                      <li><span class="bold">User Story:</span> I can type GitHub-flavored Markdown into a text area.</li>
+                      <li><span class="bold">User Story:</span> I can see a preview of the output of my markdown that is updated
+                        as I type.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_leaderboard" aria-expanded="false"
+              aria-controls="collapse_leaderboard">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+
+                  FreeCodeCamp Camper Leaderboard
+
+                </h4>
+              </div>
+            </a>
+            <div id="collapse_leaderboard" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+                  <a href="http://gmunker-fcc-leaderboard.herokuapp.com/">
+                    <img class="project_image img-responsive" src="images/fcc_leader_board.png" />
+                  </a>
+                  <hr>
+                  <div class="project_title">
+                    <h4 class="text-center">FreeCodeCamp Camper Leaderboard</h4>
+                    <h6 class="text-center">React Project of the FreeCodeCamp Course.</h6>
+                    <ul>
+                      <li><span class="bold">User Story:</span> I can see a table of the Free Code Camp campers who've earned
+                        the most brownie points in the past 30 days.</li>
+                      <li><span class="bold">User Story:</span> I can see how many brownie points they've earned in the past
+                        30 days, and how many they've earned total.</li>
+                      <li><span class="bold">User Story:</span> I can toggle between sorting the list by how many brownie points
+                        they've earned in the past 30 days and by how many brownie points they've earned total.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_timer" aria-expanded="false"
+              aria-controls="collapse_timer">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  React Timer & Countdown
+                </h4>
+              </div>
+            </a>
+            <div id="collapse_timer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
+                  <a href="https://gmunker-reacttimer.herokuapp.com/">
+                    <img class="project_image img-responsive" src="images/react_timer.png" />
+                  </a>
+                  <hr>
+                  <div class="project_title">
+                    <h4 class="text-center">React Timer & Countdown App</h4>
+                    <h6 class="text-center">Udemy: The Complete React Developer Course.</h6>
+                    <ul>
+                      <li><span class="bold">User Story:</span> Create a timer app that has both a timer and countdown tab</li>
+                      <li><span class="bold">User Story:</span> It must have a Start / Stop button that switches on mouse click,
+                        and it must stop and start the current timer weather it is the timer or countdown timer.</li>
+                      <li><span class="bold">User Story:</span> It must have a clear button which zeroes out the timer app, and
+                        on the countdown app returns to input.</li>
+                      <li><span class="bold">User Story:</span> Countdown app must start with an input field and start button,
+                        once started it must switch to the start/stop combo for the timer.</li>
+                      <li><span class="bold">User Story:</span> Create test cases to ensure everything works properly.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <img class="project_image img-responsive" src="images/js_cal.png" data-toggle="modal" data-target="#js_cal_Modal" />
-          <hr>
-          <div class="project_title">
-            <h4 class="text-center">Javascript Calculator</h4>
-            <h6 class="text-center">Advanced Front-End Developement Project of the FreeCodeCamp Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span> I can add, subtract, multiply and divide two numbers.</li>
-                <li><span class="bold">User Story:</span> I can clear the input field with a clear button.</li>
-                <li><span class="bold">User Story:</span> I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <img class="project_image img-responsive" src="images/pomo.png" data-toggle="modal" data-target="#pomo_Modal" />
-          <hr>
-          <div class="project_title">
-            <h4 class="text-center">Pomodoro Clock</h4>
-            <h6 class="text-center">Advanced Front-End Developement Project of the FreeCodeCamp Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span>  I can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed.</li>
-                <li><span class="bold">User Story:</span> I can reset the clock for my next pomodoro.</li>
-                <li><span class="bold">User Story:</span> I can customize the length of each pomodoro.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <img class="project_image img-responsive" src="images/simon_game.png" data-toggle="modal" data-target="#simon_Modal" />
-          <hr>
-          <div class="project_title">
-            <h4 class="text-center">1978 Pocket Simon Game</h4>
-            <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span> I am presented with a random series of button presses.
-                <li><span class="bold">User Story:</span> Each time I input a series of button presses correctly, I see the same
-                  series of button presses but with an additional step.</li>
-                <li><span class="bold">User Story:</span> I hear a sound that corresponds to each button both when the series
-                  of button presses plays, and when I personally press a button.</li>
-                <li><span class="bold">User Story:</span> If I press the wrong button, I am notified that I have done so, and
-                  that series of button presses starts again to remind me of the pattern so I can try again.</li>
-                <li><span class="bold">User Story:</span> I can see how many steps are in the current series of button presses.</li>
-                <li><span class="bold">User Story:</span> If I want to restart, I can hit a button to do so, and the game will
-                  return to a single step.</li>
-                <li><span class="bold">User Story:</span> I can play in strict mode where if I get a button press wrong, it notifies
-                  me that I have done so, and the game restarts at a new random series of button presses.</li>
-                <li><span class="bold">User Story:</span> I can win the game by getting a series of 20 steps correct. I am notified
-                  of my victory, then the game starts over.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <a href="http://gmunker-markdownapp.herokuapp.com/">
-            <img class="project_image img-responsive" src="images/markdown.png" />
-          </a>
-          <hr>
-          <div class="project_title">
-            <h4 class="text-center">Markdown Previewer</h4>
-            <h6 class="text-center">React Project of the FreeCodeCamp Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span> I can type GitHub-flavored Markdown into a text area.</li>
-                <li><span class="bold">User Story:</span> I can see a preview of the output of my markdown that is updated as I type.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <a href="http://gmunker-fcc-leaderboard.herokuapp.com/">
-            <img class="project_image img-responsive" src="images/fcc_leader_board.png" />
-          </a>          <hr>
-          <div class="project_title">
-            <h4 class="text-center">FreeCodeCamp Camper Leaderboard</h4>
-            <h6 class="text-center">React Project of the FreeCodeCamp Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span> I can see a table of the Free Code Camp campers who've earned the most brownie points in the past 30 days.</li>
-                <li><span class="bold">User Story:</span> I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.</li>
-                <li><span class="bold">User Story:</span> I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <a href="https://gmunker-reacttimer.herokuapp.com/">
-            <img class="project_image img-responsive" src="images/react_timer.png" />
-          </a>
-          <hr>
-          <div class="project_title">
-            <h4 class="text-center">React Timer & Countdown App</h4>
-            <h6 class="text-center">Udemy: The Complete React Developer Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span> Create a timer app that has both a timer and countdown tab</li>
-                <li><span class="bold">User Story:</span> It must have a Start / Stop button that switches on mouse 
-                click, and it must stop and start the current timer weather it is the timer or countdown timer.</li>
-                <li><span class="bold">User Story:</span> It must have a clear button which zeroes out the timer app, 
-                and on the countdown app returns to input.</li>
-                <li><span class="bold">User Story:</span> Countdown app must start with an input field and start button,
-                once started it must switch to the start/stop combo for the timer.</li>
-                <li><span class="bold">User Story:</span> Create test cases to ensure everything works properly.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project col-sm-12 col-lg-offset-2 col-lg-8 well">
-          <a href="http://gmunker-reacttodo.herokuapp.com/">
-            <img class="project_image img-responsive" src="" />
-          </a>
-          <hr>
-          <div class="project_title">
-            <h4 class="text-center">1978 Pocket Simon Game</h4>
-            <h6 class="text-center">Basic Front-End Developement Project of the FreeCodeCamp Course.</h6>
-            <ul>
-              <li><span class="bold">User Story:</span> I am presented with a random series of button presses.
-                <li><span class="bold">User Story:</span> Each time I input a series of button presses correctly, I see the same
-                  series of button presses but with an additional step.</li>
-                <li><span class="bold">User Story:</span> I hear a sound that corresponds to each button both when the series
-                  of button presses plays, and when I personally press a button.</li>
-                <li><span class="bold">User Story:</span> If I press the wrong button, I am notified that I have done so, and
-                  that series of button presses starts again to remind me of the pattern so I can try again.</li>
-                <li><span class="bold">User Story:</span> I can see how many steps are in the current series of button presses.</li>
-                <li><span class="bold">User Story:</span> If I want to restart, I can hit a button to do so, and the game will
-                  return to a single step.</li>
-                <li><span class="bold">User Story:</span> I can play in strict mode where if I get a button press wrong, it notifies
-                  me that I have done so, and the game restarts at a new random series of button presses.</li>
-                <li><span class="bold">User Story:</span> I can win the game by getting a series of 20 steps correct. I am notified
-                  of my victory, then the game starts over.</li>
-            </ul>
-          </div>
-        </div>
-
-
       </div>
     </section>
+
+    <section id="contact_me" class="col-xs-12 row">
+      <div class="text-center">
+        <h1>Greg Munker</h1>
+        <h2>Maricopa, Arizona</h2>
+        <h2>Gmunker@GregMunker.com</h2>  
+      </div>      
+    </section> 
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="modal fade" id="Personal_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
